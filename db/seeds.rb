@@ -6,5 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 5.times do
-  Location.create device_code: nil, latitude: 17.324363, longitude: 100.324363, receiving_time: DateTime.now, status: :yes
+  Location.create device_code: nil, latitude: 16.080334921155977, longitude: 108.22014560608517, receiving_time: DateTime.now, status: :yes
 end

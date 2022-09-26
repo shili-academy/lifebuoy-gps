@@ -5,5 +5,8 @@
   <td><%= location.longitude %></td>
   <td><%= location.receiving_time %></td>
   <td><%= location.status %></td>
-  <td><%= link_to "Delete", location_path(location.id), method: :delete  %></td>
+  <td>
+    <%= link_to "View on map", "https://www.google.com/maps/search/#{location.latitude},#{location.longitude}/@#{location.latitude},#{location.longitude},20z", class: "btn btn-primary", target: :_blank %>
+    <%= link_to "Delete", location_path(location.id), method: :delete, class: "btn btn-danger" %>
+  </td>
 </tr>
