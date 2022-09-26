@@ -5,4 +5,5 @@
   <td><%= location.longitude %></td>
   <td><%= location.receiving_time %></td>
   <td><%= location.status %></td>
+  <td><%= link_to "Delete", location_path(location.id), method: :delete  %></td>
 </tr>
