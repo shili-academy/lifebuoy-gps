@@ -6,7 +6,8 @@
   <td><%= location.receiving_time %></td>
   <td><%= location.status %></td>
   <td>
-    <%= link_to "View on map", "https://www.google.com/maps/search/#{location.latitude},#{location.longitude}/@#{location.latitude},#{location.longitude},20z", class: "btn btn-primary", target: :_blank %>
+    <%= link_to "View on map", "https://www.google.com/maps/search/#{location.latitude},#{location.longitude}/@#{location.latitude},#{location.longitude},20.5z", class: "btn btn-primary", target: :_blank %>
     <%= link_to "Delete", location_path(location.id), method: :delete, class: "btn btn-danger" %>
   </td>
 </tr>
+<%# https://developers.google.com/maps/documentation/urls/get-started %>
