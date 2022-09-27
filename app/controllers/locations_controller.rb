@@ -11,8 +11,10 @@ class LocationsController < ApplicationController
     @locations = Location.all.group_by_hour(:receiving_time).count
    end
 
-  # GET /locations/1 or /locations/1.json
-  def show
+
+  def set_data
+    @location = Location.create(latitude: params[:latitude], longitude: params[:longitude], status: params[:status] || :yes, receiving_time: DateTime.now)
+    @locations = Location.all.latest
   end
 
   # GET /locations/new
