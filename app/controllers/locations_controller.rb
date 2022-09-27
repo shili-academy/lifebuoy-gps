@@ -8,7 +8,7 @@ class LocationsController < ApplicationController
 
    # GET /locations/chart
    def chart
-    @locations = Location.all.group_by_minute(:receiving_time).count
+    @locations = Location.all.group_by_hour(:receiving_time).count
    end
 
   # GET /locations/1 or /locations/1.json
